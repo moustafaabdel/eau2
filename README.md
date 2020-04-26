@@ -72,18 +72,6 @@ Solution Structure:
 
 
 
-
-# OPEN QUESTIONS:
-## List of things that are not concrete and would like the answer to ...
-
-  * How should one decide on how large each chunk of the distributed arrays should be?
-
-  * <del>For now, dataframes are meant to be immutable. How does this conflate with the mention of erasing and overwriting key/value pairs in the assignment description?</del>
-
-  * <del>How to incorporate communication between completely separate key value stores running on separate applications?</del>
-    * <del>How a "master node" is spawned? And if that node exists on the client side?</del>
-
-
 # STATUS:
 ## Description of what has been done and an estimate of the work that remains ...
 1. Done:
@@ -94,7 +82,6 @@ Solution Structure:
   * Reorganized solution to a logical structure with relevant directories.
   * Streamlined testing: Included tests for all completed layers and relevant methods.
   * Completed serialization and deserialization of all relevant types from primitives up to and including DataFrame.
-  * All M2 functionality is complete including an integration test.
 
 2. Need Improvement:
   * __The network layer does not properly send the directory messages to the registered nodes and therefore, client to client communication does not fully function.__
@@ -111,4 +98,4 @@ Solution Structure:
   * <del>WaitAndGet() is not fully implemented due to a lacking networking implementation.</del>
     * <del>Our underlying Key and Value classes need to be created and hooked up to the revamped network layer.</del>
 
-  * Threaded response in KeyValueStore. (We really tried our best.)
+  * Threaded response in KeyValueStore.
